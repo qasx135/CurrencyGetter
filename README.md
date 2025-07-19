@@ -7,13 +7,13 @@
 #### Cклонируйте репозиторий себе на локальную машину либо с https либо shh
 ```
 ssh:
-- git clone git@github.com:qasx135/.git
+- git clone git@github.com:qasx135/CurrencyGetter.git
 https:
-- git clone https://github.com/qasx135/.git
+- git clone https://github.com/qasx135/CurrencyGetter.git
 ```
 #### Перейдиет в папку sometask
 ```
-cd sometask
+cd CurrencyGetter
 ```
 #### Запустите файл docker-compose.yml
 ```
@@ -35,17 +35,17 @@ docker compose up --build
 
 Среднее значение курса единиц валют к одному рублю: 24.87814
 ```
-### 1) Использование Go
+### 2) Использование Go
 #### Cклонируйте репозиторий себе на локальную машину либо с https либо shh
 ```
 ssh:
-- git clone git@github.com:qasx135/.git
+- git clone git@github.com:qasx135/CurrencyGetter.git
 https:
-- git clone https://github.com/qasx135/.git
+- git clone https://github.com/qasx135/CurrencyGetter.git
 ```
 #### Перейдиет в папку sometask
 ```
-cd sometask
+cd CurrencyGetter
 ```
 #### Запустите приложение 
 ```
