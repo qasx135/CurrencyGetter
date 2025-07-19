@@ -11,7 +11,7 @@ ssh:
 https:
 - git clone https://github.com/qasx135/CurrencyGetter.git
 ```
-#### Перейдиет в папку sometask
+#### Перейдите в папку CurrencyGetter
 ```
 cd CurrencyGetter
 ```
@@ -43,7 +43,7 @@ ssh:
 https:
 - git clone https://github.com/qasx135/CurrencyGetter.git
 ```
-#### Перейдиет в папку sometask
+#### Перейдиет в папку CurrencyGetter
 ```
 cd CurrencyGetter
 ```
