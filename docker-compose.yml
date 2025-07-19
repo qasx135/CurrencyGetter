@@ -1,0 +1,6 @@
+services:
+  currency:
+    build:
+      dockerfile: Dockerfile
+
+    container_name: currency_getter
