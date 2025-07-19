@@ -35,7 +35,7 @@ const (
 
 func (app *App) Run() {
 	var allResults []models.ComputeStruct
-	for i := 0; i < 99; i++ {
+	for i := 0; i < 90; i++ {
 		app.wg.Add(1)
 		go func(day int) {
 			defer app.wg.Done()
@@ -154,11 +154,21 @@ func ProcessData(data []models.ComputeStruct) (models.ComputeStruct, models.Comp
 	averageExchRate := 0.0
 	for _, val := range data {
 		// Проверка на СДР - не считается отдельной валютой
-		if val.RealCurrency >= maxExchRate.RealCurrency && val.NumCode != "960" {
+		if val.RealCurrency > maxExchRate.RealCurrency && val.NumCode != "960" {
 			maxExchRate = val
 		}
-		if val.RealCurrency <= minExchRate.RealCurrency {
+		if val.RealCurrency == maxExchRate.RealCurrency && val.NumCode != "960" {
+			if val.Date.After(maxExchRate.Date) {
+				maxExchRate = val
+			}
+		}
+		if val.RealCurrency < minExchRate.RealCurrency {
 			minExchRate = val
+		}
+		if val.RealCurrency == minExchRate.RealCurrency {
+			if val.Date.After(minExchRate.Date) {
+				minExchRate = val
+			}
 		}
 		averageExchRate += val.RealCurrency
 	}
